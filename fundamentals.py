@@ -1,53 +1,36 @@
-# Example: print a message
+print('#####################################class-1#####################################')
+# Example 1: print a message
 print('Welcome to Class 1! (without variable')
 
-# Example: Declare different variables
+# Example 2: Declare variables
 msg = 'Welcome to Class 1! (from variable)'
 
-# Types:
+# Example 3: Show variable type
 print(type(msg))
-print(msg)
 
-integer_number = 1
-print(type(integer_number))
-
+# Example 4: Primitive types
+int_number = 1
 float_number = 3.1415
-print(type(float_number))
+is_boolean = True
 
-is_ready = True
-print(type(is_ready))
+# Example 5: lists (vectors), tuples (immutables) and dictionaries
+# Remember -> lists and dictionaries are mutable
+odd_numbers_list = [1, 3, 5, 7, 9]
+odd_numbers_list.append(11)
+data_of_new_therapist = ['Joseph', 42, 'Psychology', True]
+tuple_of_levels = ('KINDER', 'PRIMARY', 'HIGH SCHOOL')
+dictionary_of_contacts = {'1150607080':'Tom Harris', '1140506070':'Joe Smith'}
+print(dictionary_of_contacts['1140506070'])
 
-# lists (vectors), tuples and dictionaries
-# lists and dictionaries are mutables
-odd_numbers = [1, 3, 5, 7, 9]
-odd_numbers.append(11)
-print(type(odd_numbers))
-print(odd_numbers)
+# Add new contact to the dictionary ->
+dictionary_of_contacts['1130405060'] = 'John Doe'
 
-therapist = ['Carlos', 42, 'Psicologo', True]
-print(therapist[0])
-
-level = ('INICIAL', 'PRIMARIO', 'SECUNDARIO')
-print(type(level))
-
-os = {'001':'OSDE', '002':'GALENO'}
-therapists = {'62803':'Carlos Bustos','61809':'Jorge Sosa' }
-print(type(os))
-print(os['001'])
-print(therapists['62803'])
-
-# new therapist added
-therapists['60100'] = 'Catalina Peréz'
-print(therapists)
-
-# Slicing apply for list, tuples and strings (ordered collections). Slicing doesn't change the string.
-fullname = 'Carlos Bustos'
-
-name = fullname[0:6]
-surname = fullname[7:13]
-
-print(name, surname)
-print(odd_numbers[0:3])
+# Example 6: Slicing apply for list, tuples and strings (ordered collections) 
+# Warning: Slicing doesn't change the original string, if you'll change it use a new variable for save value
+fullname = 'John Doe'
+name = fullname[0:4]
+surname = fullname[5:]
+print('The first name is ' + name + ' and the surname is ' + surname)
 
 
 
