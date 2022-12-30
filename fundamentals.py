@@ -28,10 +28,7 @@ dictionary_of_contacts['1130405060'] = 'John Doe'
 # Example 6: Slicing apply for list, tuples and strings (ordered collections) 
 # Warning: Slicing doesn't change the original string, if you'll change it use a new variable for save value
 fullname = 'John Doe'
-name = fullname[0:4]
+name = fullname[:4]
 surname = fullname[5:]
 print('The first name is ' + name + ' and the surname is ' + surname)
-
-
-
 
