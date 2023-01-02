@@ -31,6 +31,10 @@ print(max(2, 3))
 print(min(7, 5))
 
 # Example4 - Lambda functions
+
+def converse_to_pesos(value: float) -> float:
+    return value * 346
+
 # Long
 prices_in_dollar = [20, 15.5, 215]
 prices_in_pesos = []
@@ -38,7 +42,12 @@ prices_in_pesos = []
 for price_in_dollar in prices_in_dollar:
     prices_in_pesos.append(float(price_in_dollar) * 346)
 
-# Short
+# Short Option 1
+prices_in_pesos = list(map(
+    converse_to_pesos, prices_in_dollar
+))
+
+# Short Option 2 - Example with map() and lambda function
 prices_in_pesos = list(map(
     lambda dollar: float(dollar) * 346,
     prices_in_dollar
