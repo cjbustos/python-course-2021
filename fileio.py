@@ -14,7 +14,7 @@
 # w - write
 # a - append
 
-path_source = "/Users/carlos/repos/django-course-2022/debug.log"
+path_source = "/Users/carlos/repos/django-course-2022/logs/django.log"
 path_to = "/Users/carlos/repos/python-course-2021/requests.log"
 
 def read_file(path: str):
@@ -29,13 +29,12 @@ def write_file(path: str, content: str):
     f.write("\nend of file")
     f.close()
 
-def write_with_readlines(content: str, path: str):
-    """ Only write GET request """
-    methods = ('GET', 'POST', 'DELETE')
-    f = open(path, "a")
+def write_with_readlines(content: str, method: str):
+    """ Only write GET or POST request """
+    f = open('django.log', "w")
     temp = content.splitlines()
     for line in temp: 
-        if line[1:4] == methods[0]:       
+        if line[1:len(method) + 1] == method:       
             f.write(line + "\n")
     f.close()
 
@@ -43,4 +42,4 @@ def write_with_readlines(content: str, path: str):
 # write_file(path_to, read_file(path_source))
 # print(read_file(path_to))
 
-write_with_readlines(read_file(path_source), path_to)
+write_with_readlines(read_file(path_source),'GET')

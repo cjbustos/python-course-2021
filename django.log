@@ -9,3 +9,5 @@
 "GET /delete_client/7 HTTP/1.1" 200 645
 "GET /clients HTTP/1.1" 200 1701
 "GET /clients HTTP/1.1" 200 1701
+"GET /therapists-json HTTP/1.1" 200 388
+"GET /persons HTTP/1.1" 200 1064
