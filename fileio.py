@@ -29,7 +29,18 @@ def write_file(path: str, content: str):
     f.write("\nend of file")
     f.close()
 
-# print(read_file(path_source))
+def write_with_readlines(content: str, path: str):
+    """ Only write GET request """
+    methods = ('GET', 'POST', 'DELETE')
+    f = open(path, "a")
+    temp = content.splitlines()
+    for line in temp: 
+        if line[1:4] == methods[0]:       
+            f.write(line + "\n")
+    f.close()
 
-write_file(path_to, read_file(path_source))
-print(read_file(path_to))
+# print(read_file(path_source))
+# write_file(path_to, read_file(path_source))
+# print(read_file(path_to))
+
+write_with_readlines(read_file(path_source), path_to)
