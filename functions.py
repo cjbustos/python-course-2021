@@ -50,6 +50,7 @@ prices_in_pesos = list(map(
 # Short Option 2 - Example with map() and lambda function
 prices_in_pesos = list(map(
     lambda dollar: float(dollar) * 346,
+    #ECMA6 arr.map((elem) => elem * 346)
     prices_in_dollar
 ))
 
